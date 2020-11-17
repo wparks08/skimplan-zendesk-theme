@@ -1,10 +1,10 @@
 // Variables
 
 // Colors
-$brand_color: #0072ef !default;
+$brand_color: rgba(23, 73, 77, 1) !default;
 $brand_text_color: #fff !default; //Color for text with an accent color background
 $text_color: #333 !default;
-$link_color: #0072ef !default;
+$link_color: rgb(23, 73, 77) !default;
 $background_color: #fff !default;
 
 $visited-link-color: zass-darken($link_color, 20%);

@@ -661,6 +661,16 @@ ul {
 
 .logo img {
   max-height: 37px;
+  vertical-align: middle;
+}
+
+.logo span {
+  text-transform: uppercase;
+  margin-left: 16px;
+}
+
+.logo a:hover {
+  text-decoration: none;
 }
 
 .user-nav {
@@ -1273,6 +1283,7 @@ ul {
 
 .community-image {
   min-height: 300px;
+  margin-top: 16px;
   background-image: url($community_image);
   background-position: center;
   background-repeat: no-repeat;
