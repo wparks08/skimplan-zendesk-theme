@@ -206,6 +206,13 @@
           "label": "logo_label"
         },
         {
+          "identifier": "show_brand_name",
+          "type": "checkbox",
+          "description": "brand_name_description",
+          "label": "brand_name_label",
+          "value": true
+        },
+        {
           "identifier": "favicon",
           "type": "file",
           "description": "favicon_description",
@@ -365,8 +372,8 @@
         {
           "identifier": "show_follow_topic",
           "type": "checkbox",
-          "description": "follow_topic_description",
-          "label": "follow_topic_label",
+          "description": "show_follow_topic_description",
+          "label": "show_follow_topic_label",
           "value": true
         }
       ]

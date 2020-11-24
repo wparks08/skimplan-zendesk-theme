@@ -4,7 +4,9 @@
   <div class="logo">
     {{#link 'help_center'}}
       <img src="{{settings.logo}}" alt="{{t 'home_page' name=help_center.name}}" />
-      <span>{{help_center.name}}</span>
+      {{#if settings.show_brand_name}}
+        <span>{{help_center.name}}</span>
+      {{/if}}
     {{/link}}
   </div>
   <div class="nav-wrapper">
