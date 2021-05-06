@@ -1,7 +1,7 @@
 {
   "name": "SKIMPLAN",
   "author": "Will Parks Web Development LLC",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -304,6 +304,13 @@
           "type": "checkbox",
           "description": "article_author_description",
           "label": "article_author_label",
+          "value": true
+        },
+        {
+          "identifier": "show_article_dates",
+          "type": "checkbox",
+          "description": "article_dates_description",
+          "label": "article_dates_label",
           "value": true
         },
         {

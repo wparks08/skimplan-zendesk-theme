@@ -42,6 +42,8 @@
   "articles_in_section_description": "Show sidebar of articles in section",
   "article_author_label": "Author",
   "article_author_description": "Show author image and name",
+  "article_dates_label": "Dates",
+  "article_dates_description": "Show created or edited dates on articles",
   "article_comments_label": "Comments",
   "article_comments_description": "Show comments on articles",
   "follow_article_label": "Follow",

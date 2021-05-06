@@ -72,6 +72,7 @@
               {{/link}}
             {{/if}}
 
+              {{#if settings.show_article_dates}}
             <ul class="meta-group">
               {{#is article.created_at article.edited_at}}
                 <li class="meta-data">{{date article.created_at timeago=true}}</li>
@@ -80,6 +81,7 @@
                 <li class="meta-data">{{t 'updated'}}</li>
               {{/is}}
             </ul>
+              {{/if}}
           </div>
         </div>
 
