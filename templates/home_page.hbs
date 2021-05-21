@@ -19,8 +19,8 @@
             <ul class="blocks-list">
                 {{#each categories}}
                     {{#if ../has_multiple_categories}}
-                        <li class="blocks-item">
-                            <a href='{{url}}' class="blocks-item-link skimplan-button-base skimplan-button-base-root">
+                        <li class="blocks-item {{#is id 360004863591}}active{{/is}}">
+                            <a href='#' onclick="showSection({{id}})" id="btn-{{id}}" class="blocks-item-link skimplan-button-base skimplan-button-base-root">
                                 <span class="blocks-item-title">{{name}}</span>
                             </a>
 <!--                                <span class="blocks-item-description">{{excerpt description}}</span>-->
@@ -44,7 +44,8 @@
 
         <section class="articles">
             {{#each categories}}
-                {{#is id 360004863591}}
+                <div id="category-{{id}}" class="category-div {{#isnt id 360004863591}}hidden{{/isnt}}">
+
                     {{#each sections}}
                         <section class="section section-card">
                             <h2 class="section-tree-title">
@@ -84,7 +85,7 @@
                             {{/if}}
                         </section>
                     {{/each}}
-                {{/is}}
+                </div>
             {{/each}}
         </section>
 
@@ -129,3 +130,58 @@
         </section>
     {{/if}}
 </div>
+
+<script>
+    const buttonActiveClass = "active";
+    const buttonContainerClass = "blocks-item";
+    const hideCategoryDivClass = "hidden";
+    const categoryDivClass = "category-div";
+
+    const showSection = (id) => {
+        removeActiveClassFromAllButtons();
+        addHiddenClassToAllCategoryDivs();
+
+        const button = document.getElementById(`btn-${id}`);
+        const categoryDiv = document.getElementById(`category-${id}`);
+        const li = button.parentElement;
+
+        toggleClass(li, buttonActiveClass);
+        toggleClass(categoryDiv, hideCategoryDivClass);
+    }
+
+    const removeActiveClassFromAllButtons = () => {
+        const blocksItems = document.getElementsByClassName(buttonContainerClass);
+        Array.prototype.forEach.call(blocksItems, (element) => removeClass(element, buttonActiveClass))
+    }
+
+    const addHiddenClassToAllCategoryDivs = () => {
+        const categoryDivs = document.getElementsByClassName(categoryDivClass);
+        Array.prototype.forEach.call(categoryDivs, (element) => addClass(element, hideCategoryDivClass));
+    }
+
+    const toggleClass = (element, className) => {
+        const classArr = element.className.split(" ");
+        if (classArr.includes(className)) {
+            removeClass(element, className);
+        } else {
+            addClass(element, className);
+        }
+    }
+
+    const removeClass = (element, className) => {
+        const classArr = getClassArr(element);
+        element.className = classArr.filter(cl => cl !== className).join(" ");
+    }
+
+    const addClass = (element, className) => {
+        const classArr = getClassArr(element);
+        if (!classArr.includes(className)) {
+            classArr.push(className);
+        }
+        element.className = classArr.join(" ");
+    }
+
+    const getClassArr = (element) => {
+        return element.className.split(" ");
+    }
+</script>
