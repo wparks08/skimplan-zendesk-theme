@@ -19,8 +19,8 @@
             <ul class="blocks-list">
                 {{#each categories}}
                     {{#if ../has_multiple_categories}}
-                        <li class="blocks-item">
-                            <a href='{{url}}' class="blocks-item-link skimplan-button-base skimplan-button-base-root">
+                        <li class="blocks-item {{#is id 360004863591}}active{{/is}}">
+                            <a href='#' onclick="showSection({{id}})" id="btn-{{id}}" class="blocks-item-link skimplan-button-base skimplan-button-base-root">
                                 <span class="blocks-item-title">{{name}}</span>
                             </a>
 <!--                                <span class="blocks-item-description">{{excerpt description}}</span>-->
@@ -44,7 +44,8 @@
 
         <section class="articles">
             {{#each categories}}
-                {{#is id 360004863591}}
+                <div id="category-{{id}}" class="category-div {{#isnt id 360004863591}}hidden{{/isnt}}">
+
                     {{#each sections}}
                         <section class="section section-card">
                             <h2 class="section-tree-title">
@@ -84,7 +85,7 @@
                             {{/if}}
                         </section>
                     {{/each}}
-                {{/is}}
+                </div>
             {{/each}}
         </section>
 
@@ -129,3 +130,5 @@
         </section>
     {{/if}}
 </div>
+
+<script src="{{asset 'home-page.js'}}"></script>

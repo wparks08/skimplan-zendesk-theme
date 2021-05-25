@@ -1,7 +1,11 @@
 {
   "colors_group_label": "Colors",
   "brand_color_description": "Brand color for major navigational elements",
+  "brand_color_dark_description": "Darker Brand color for major navigational elements",
+  "brand_color_light_description": "Lighter Brand color for major navigational elements",
   "brand_color_label": "Brand color",
+  "brand_color_light_label": "Brand color - Light",
+  "brand_color_dark_label": "Brand color - Dark",
   "brand_text_color_description": "Brand color for hover and active states",
   "brand_text_color_label": "Brand text color",
   "text_color_description": "Text color for body and heading elements",

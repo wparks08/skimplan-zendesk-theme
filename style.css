@@ -1147,12 +1147,17 @@ ul {
   font-size: 14px;
   min-width: 64px;
   box-sizing: border-box;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  /*transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;*/
   font-family: Montserrat, Open Sans, sans-serif;
   font-weight: bold;
   line-height: 1.75;
   border-radius: 4px;
   text-transform: uppercase;
+  background-color: $brand_color_light;
+}
+
+li.active > .skimplan-button-base {
+  background-color: $brand_color;
 }
 
 .blocks-item {
@@ -1166,8 +1171,8 @@ ul {
   max-width: 100%;
   text-align: center;
   box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
-  background-color: $brand_color;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  /*background-color: $brand_color;*/
+  /*transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;*/
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
@@ -1180,7 +1185,7 @@ ul {
 }
 
 .blocks-item:hover, .blocks-item:focus, .blocks-item:active {
-  background-color: $brand_color_dark;
+  /*background-color: $brand_color_dark;*/
 }
 
 .blocks-item:hover *, .blocks-item:focus *, .blocks-item:active * {
@@ -1258,6 +1263,18 @@ ul {
 .home-section h2 {
   margin-bottom: 10px;
   text-align: center;
+}
+
+li.active > a:focus {
+  box-shadow: none;
+}
+
+.articles {
+  padding: 24px;
+}
+
+.hidden {
+  display: none;
 }
 
 /***** Promoted articles *****/
