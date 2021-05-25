@@ -16,6 +16,13 @@
           "value": "#FFB84C"
         },
         {
+          "identifier": "brand_color_light",
+          "type": "color",
+          "description": "brand_color_light_description",
+          "label": "brand_color_light_label",
+          "value": "#FFE699"
+        },
+        {
           "identifier": "brand_color_dark",
           "type": "color",
           "description": "brand_color_dark_description",
@@ -304,14 +311,14 @@
           "type": "checkbox",
           "description": "article_author_description",
           "label": "article_author_label",
-          "value": true
+          "value": false
         },
         {
           "identifier": "show_article_dates",
           "type": "checkbox",
           "description": "article_dates_description",
           "label": "article_dates_label",
-          "value": true
+          "value": false
         },
         {
           "identifier": "show_article_comments",
