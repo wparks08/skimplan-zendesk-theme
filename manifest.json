@@ -1,7 +1,7 @@
 {
   "name": "MyCheck-In",
   "author": "Will Parks Web Development LLC",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
